@@ -66,6 +66,9 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-des: dist-files
+
   report:
     needs:
       - lint
