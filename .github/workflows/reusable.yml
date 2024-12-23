@@ -2,7 +2,7 @@ name: Reusable workflow
 on: 
   workflow_call:
     inputs:
-      artifact-description:
+      artifact-des:
          description: "Hello"
          default: dist
          type: string
@@ -13,7 +13,7 @@ jobs:
       - name: Get build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: ${{inputs.artifact-description}}
+          name: ${{inputs.artifact-des}}
       - name: Output contents
         run: ls
       - name: Deploy
